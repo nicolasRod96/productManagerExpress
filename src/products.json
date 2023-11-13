@@ -1,0 +1,47 @@
+[
+	{
+		"title": "Mouse Logitech",
+		"description": "Mouse Gaming",
+		"price": "$30",
+		"thumbnail": "mouse.png",
+		"code": "AA6",
+		"stock": 23,
+		"id": 1
+	},
+	{
+		"title": "Teclado",
+		"description": "Teclado Gaming",
+		"price": "$50",
+		"thumbnail": "teclado.png",
+		"code": "AA2",
+		"stock": 7,
+		"id": 2
+	},
+	{
+		"title": "Monitor gaming",
+		"description": "Monitor gaming 144hz",
+		"price": "$250",
+		"thumbnail": "monitor144hz.png",
+		"code": "AA3",
+		"stock": 5,
+		"id": 3
+	},
+	{
+		"title": "Fuente 1000w",
+		"description": "Fuente para pc de 1000w",
+		"price": "$125",
+		"thumbnail": "fuente.png",
+		"code": "AA4",
+		"stock": 10,
+		"id": 4
+	},
+	{
+		"title": "Monitor",
+		"description": "Monitor Generico",
+		"price": "$70",
+		"thumbnail": "monitorGenerico.png",
+		"code": "AA5",
+		"stock": 5,
+		"id": 5
+	}
+]
