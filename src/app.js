@@ -3,8 +3,9 @@ import productManager from "../productsManager.js";
 
 
 const app = express();
-const PORT = 5000;
-const newInstance = new productManager();
+const PORT = 8080;
+const path = "./src/products.json";
+const newInstance = new productManager(path);
 
 app.get("/", (req, res) => {
   res.end("<h1>Pagina de inicio de Productos</h1>");
@@ -14,8 +15,16 @@ app.get("/products", (req, res) => {
 
   if(req.query.limit){
     let products = newInstance.getProducts();
-    products.length = Number(req.query.limit);
-    return res.send(products);    
+    if(products){
+      if(req.query.limit){
+        return res.json(products.slice(0,req.query.limit));
+      }else{
+        res.json(products);
+      }
+    }else{
+      return console.log("No hay productos en la lista");
+    }
+
   }
 
   let products = newInstance.getProducts();
@@ -27,7 +36,7 @@ app.get("/products", (req, res) => {
 
 app.get("/products/:product_id", (req, res) => {
   const { product_id } = req.params;
-  const product = newInstance.getProductById(product_id);
+  const product = newInstance.getProductById(path, product_id);
 
   if (product) {
     return res.json(product);

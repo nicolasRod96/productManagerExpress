@@ -25,12 +25,7 @@ class productManager {
     }
   }
 
-  getProducts() {
-    try {
-      this.products = JSON.parse(fs.readFileSync("./src/products.json", "utf-8"));
-    } catch (error) {
-      this.products = [];
-    }
+  getProducts() {    
     return this.products;
   }
 
@@ -86,10 +81,10 @@ class productManager {
       }
     }
   }
-  getProductById(idProducto) {
+  getProductById(path,idProducto) {
     try {
       let products = JSON.parse(
-        fs.readFileSync("./src/products.json", "utf-8")
+        fs.readFileSync(path, "utf-8")
       );
       const product = products.find((prod) => prod.id === Number(idProducto));
 
