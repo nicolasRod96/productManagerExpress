@@ -43,5 +43,50 @@
 		"code": "AA5",
 		"stock": 5,
 		"id": 5
+	},
+	{
+		"title": "mouse",
+		"description": "mouse Generico",
+		"price": "$15",
+		"thumbnail": "mouseGenerico.png",
+		"code": "AA6",
+		"stock": 12,
+		"id": 6
+	},
+	{
+		"title": "control PS4",
+		"description": "control ps4",
+		"price": "$50",
+		"thumbnail": "control.png",
+		"code": "AA7",
+		"stock": 4,
+		"id": 7
+	},
+	{
+		"title": "Mouse pad",
+		"description": "Mouse pad XXL",
+		"price": "$10",
+		"thumbnail": "mousepad.png",
+		"code": "AA8",
+		"stock": 9,
+		"id": 8
+	},
+	{
+		"title": "Microfono",
+		"description": "Microfono Generico",
+		"price": "$20",
+		"thumbnail": "moicrofonoGenerico.png",
+		"code": "AA9",
+		"stock": 15,
+		"id": 9
+	},
+	{
+		"title": "Camara web",
+		"description": "Camara web alta resolución",
+		"price": "$30",
+		"thumbnail": "camaraWeb.png",
+		"code": "AA10",
+		"stock": 15,
+		"id": 10
 	}
 ]
