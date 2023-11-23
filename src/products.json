@@ -60,8 +60,11 @@
 		"price": "$15",
 		"thumbnail": "mouseGenerico.png",
 		"code": "AA6",
+<<<<<<< HEAD
 		"category": "Mouse",
 		"boolean": true,
+=======
+>>>>>>> b9b58c58ffac2449a467a1a812be6998c5d3797d
 		"stock": 12,
 		"id": 6
 	},
@@ -72,8 +75,11 @@
 		"thumbnail": "control.png",
 		"code": "AA7",
 		"stock": 4,
+<<<<<<< HEAD
 		"category": "Gaming",
 		"boolean": false,
+=======
+>>>>>>> b9b58c58ffac2449a467a1a812be6998c5d3797d
 		"id": 7
 	},
 	{
@@ -83,8 +89,11 @@
 		"thumbnail": "mousepad.png",
 		"code": "AA8",
 		"stock": 9,
+<<<<<<< HEAD
 		"category": "MousePad",
 		"boolean": false,
+=======
+>>>>>>> b9b58c58ffac2449a467a1a812be6998c5d3797d
 		"id": 8
 	},
 	{
@@ -93,8 +102,11 @@
 		"price": "$20",
 		"thumbnail": "moicrofonoGenerico.png",
 		"code": "AA9",
+<<<<<<< HEAD
 		"category": "Perifericos",
 		"boolean": false,
+=======
+>>>>>>> b9b58c58ffac2449a467a1a812be6998c5d3797d
 		"stock": 15,
 		"id": 9
 	},
@@ -105,6 +117,7 @@
 		"thumbnail": "camaraWeb.png",
 		"code": "AA10",
 		"stock": 15,
+<<<<<<< HEAD
 		"category": "Perifericos",
 		"boolean": true,
 		"id": 10
@@ -174,5 +187,8 @@
 		"category": "Cables Conectores",
 		"boolean": true,
 		"id": 16
+=======
+		"id": 10
+>>>>>>> b9b58c58ffac2449a467a1a812be6998c5d3797d
 	}
 ]
