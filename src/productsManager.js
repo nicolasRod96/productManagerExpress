@@ -25,7 +25,7 @@ class productManager {
     }
   }
 
-  getProducts() {    
+  getProducts() {
     return this.products;
   }
 
@@ -34,19 +34,6 @@ class productManager {
       product.id = 1;
     } else {
       product.id = this.products[this.products.length - 1].id + 1;
-    }
-
-    if (
-      //validar que ingresaron todos los datos necesarios
-      product.title == undefined ||
-      product.description == undefined ||
-      product.price == undefined ||
-      product.code == undefined ||
-      product.stock == undefined ||
-      product.thumbnail == undefined
-    ) {
-      //si un dato no es ingresado mostrar que faltan datos
-      console.log("Faltan datos");
     }
 
     if (product.id === 1) {
@@ -81,11 +68,9 @@ class productManager {
       }
     }
   }
-  getProductById(path,idProducto) {
+  getProductById(path, idProducto) {
     try {
-      let products = JSON.parse(
-        fs.readFileSync(path, "utf-8")
-      );
+      let products = JSON.parse(fs.readFileSync(path, "utf-8"));
       const product = products.find((prod) => prod.id === Number(idProducto));
 
       if (product) {
@@ -98,65 +83,44 @@ class productManager {
     }
   }
 
-  async deleteProduct(idProducto) {
-    const getById = this.products.find((n) => n.id === idProducto);
+  async deleteProduct(path, idProducto) {
+    try {
+      let products = JSON.parse(fs.readFileSync(path, "utf-8"));
+      const producto = products.find((prod) => prod.id === Number(idProducto));
 
-    if (!getById) {
-      console.log("No exite el producto");
-    } else {
-      try {
-        const index = this.products.findIndex((n) => n.id === idProducto);
+      if (!producto) {
+        console.log("Id not Found");
+      } else {
+        const index = this.products.findIndex((n) => n.id === Number(idProducto));
         this.products.splice(index, 1);
 
-        console.log("Lista con el producto eliminado: ", this.products);
-
         await this.saveFile(this.products);
-
         return true;
-      } catch (error) {
-        console.log(error);
-
-        return false;
       }
+    } catch (error) {
+      console.log(error);
     }
-  }
+    }
+  
 
-  async updateProduct(idProducto, product) {
-    const getById = this.products.find((n) => n.id === idProducto);
+  async updateProduct(path, idProducto, product) {
+    try {
+      let products = JSON.parse(fs.readFileSync(path, "utf-8"));
+      const producto = products.find((prod) => prod.id === Number(idProducto));
 
-    if (!getById) {
-      console.log("No exite el producto");
-    } else {
-      if (
-        //validar que ingresaron todos los datos necesarios
-        product.title == undefined ||
-        product.description == undefined ||
-        product.price == undefined ||
-        product.code == undefined ||
-        product.stock == undefined ||
-        product.thumbnail == undefined
-      ) {
-        //si un dato no es ingresado mostrar que faltan datos
-        console.log("Faltan datos");
-        return;
+      if (!producto) {
+        console.log("Id not Found");
       } else {
-        try {
-          const index = this.products.findIndex((n) => n.id === idProducto);
-          this.products.splice(index, 1, product);
-          product.id = idProducto;
-
-          console.log("Lista con el producto Modificado: ", this.products);
-
-          await this.saveFile(this.products);
-
-          return true;
-        } catch (error) {
-          console.log(error);
-
-          return false;
-        }
+        const index = this.products.findIndex((n) => n.id === Number(idProducto));
+        this.products.splice(index, 1, product);
+        product.id = Number(idProducto);
+        await this.saveFile(this.products);
+        return true;
       }
+    } catch (error) {
+      console.log(error);
     }
+    
   }
 }
 

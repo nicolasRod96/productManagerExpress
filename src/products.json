@@ -1,11 +1,13 @@
 [
 	{
 		"title": "Mouse Logitech",
-		"description": "Mouse Gaming",
-		"price": "$30",
-		"thumbnail": "mouse.png",
-		"code": "AA6",
-		"stock": 23,
+		"description": "Mouse Gaming de alta calidad 7200dpi",
+		"price": "$25",
+		"code": "AA1",
+		"stock": 16,
+		"thumbnail": "MouseL.png",
+		"category": "Gaming",
+		"boolean": false,
 		"id": 1
 	},
 	{
@@ -15,15 +17,19 @@
 		"thumbnail": "teclado.png",
 		"code": "AA2",
 		"stock": 7,
+		"category": "Gaming",
+		"boolean": false,
 		"id": 2
 	},
 	{
 		"title": "Monitor gaming",
-		"description": "Monitor gaming 144hz",
-		"price": "$250",
-		"thumbnail": "monitor144hz.png",
+		"description": "Monitor gaming 144hz alta definición",
+		"price": "$230",
 		"code": "AA3",
-		"stock": 5,
+		"stock": 10,
+		"thumbnail": "monitor144hz.png",
+		"category": "Mounitores",
+		"boolean": true,
 		"id": 3
 	},
 	{
@@ -33,6 +39,8 @@
 		"thumbnail": "fuente.png",
 		"code": "AA4",
 		"stock": 10,
+		"category": "Fuentes",
+		"boolean": true,
 		"id": 4
 	},
 	{
@@ -42,6 +50,129 @@
 		"thumbnail": "monitorGenerico.png",
 		"code": "AA5",
 		"stock": 5,
+		"category": "Monitores",
+		"boolean": false,
 		"id": 5
+	},
+	{
+		"title": "mouse",
+		"description": "mouse Generico",
+		"price": "$15",
+		"thumbnail": "mouseGenerico.png",
+		"code": "AA6",
+		"category": "Mouse",
+		"boolean": true,
+		"stock": 12,
+		"id": 6
+	},
+	{
+		"title": "control PS4",
+		"description": "control ps4",
+		"price": "$50",
+		"thumbnail": "control.png",
+		"code": "AA7",
+		"stock": 4,
+		"category": "Gaming",
+		"boolean": false,
+		"id": 7
+	},
+	{
+		"title": "Mouse pad",
+		"description": "Mouse pad XXL",
+		"price": "$10",
+		"thumbnail": "mousepad.png",
+		"code": "AA8",
+		"stock": 9,
+		"category": "MousePad",
+		"boolean": false,
+		"id": 8
+	},
+	{
+		"title": "Microfono",
+		"description": "Microfono Generico",
+		"price": "$20",
+		"thumbnail": "moicrofonoGenerico.png",
+		"code": "AA9",
+		"category": "Perifericos",
+		"boolean": false,
+		"stock": 15,
+		"id": 9
+	},
+	{
+		"title": "Camara web",
+		"description": "Camara web alta resolución",
+		"price": "$30",
+		"thumbnail": "camaraWeb.png",
+		"code": "AA10",
+		"stock": 15,
+		"category": "Perifericos",
+		"boolean": true,
+		"id": 10
+	},
+	{
+		"title": "Cable HDMI",
+		"description": "Cable HDMI, soporta hasta 4k",
+		"price": "$30",
+		"code": "AA11",
+		"stock": 20,
+		"thumbnail": "HDMI.png",
+		"category": "Cables Conectores",
+		"boolean": true,
+		"id": 11
+	},
+	{
+		"title": "Cable DVI",
+		"description": "Cable DVI, soporta hasta 4k",
+		"price": "$35",
+		"code": "AA12",
+		"stock": 20,
+		"thumbnail": "DVI.png",
+		"category": "Cables Conectores",
+		"boolean": true,
+		"id": 12
+	},
+	{
+		"title": "Cable DVI xxl",
+		"description": "Cable DVI, soporta hasta 4k, 3mts",
+		"price": "$122",
+		"code": "AA13",
+		"stock": 20,
+		"thumbnail": "DVIXXL.png",
+		"category": "Cables Conectores",
+		"boolean": true,
+		"id": 13
+	},
+	{
+		"title": "Cable USB-C a USB-C",
+		"description": "Cable USB-C de alta transferencia de datos de 3 mts",
+		"price": "$10",
+		"code": "AA14",
+		"stock": 20,
+		"thumbnail": "USBC.png",
+		"category": "Cables Conectores",
+		"boolean": true,
+		"id": 14
+	},
+	{
+		"title": "Cable USB-C a Lighting",
+		"description": "Cable USB-C de alta transferencia de datos para Iphone de 5 mts",
+		"price": "$12",
+		"code": "AA115",
+		"stock": 10,
+		"thumbnail": "USBCaLighting1.png",
+		"category": "Cables Conectores",
+		"boolean": false,
+		"id": 15
+	},
+	{
+		"title": "VGA",
+		"description": "Cable VGA antiguas generaciones",
+		"price": "$7",
+		"code": "AA100",
+		"stock": 100,
+		"thumbnail": "VGA.png",
+		"category": "Cables Conectores",
+		"boolean": true,
+		"id": 16
 	}
 ]

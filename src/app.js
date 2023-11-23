@@ -1,47 +1,19 @@
 import express from "express";
-import productManager from "../productsManager.js";
+import productRoutes from './routes/products.routes.js'
+import cartRoutes from './routes/cart.routes.js'
 
 
 const app = express();
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 const PORT = 8080;
-const path = "./src/products.json";
-const newInstance = new productManager(path);
 
-app.get("/", (req, res) => {
-  res.end("<h1>Pagina de inicio de Productos</h1>");
-});
 
-app.get("/products", (req, res) => {  
+app.use("/api/products", productRoutes);
+app.use("/api/cart", cartRoutes);
 
-  if(req.query.limit){
-    let products = newInstance.getProducts();
-    if(products){
-      if(req.query.limit){
-        return res.json(products.slice(0,req.query.limit));
-      }else{
-        res.json(products);
-      }
-    }else{
-      return console.log("No hay productos en la lista");
-    }
 
-  }
-
-  let products = newInstance.getProducts();
-  if (products) {
-    return res.send(products);
-  }
-  return console.log("No hay productos en la lista");
-});
-
-app.get("/products/:product_id", (req, res) => {
-  const { product_id } = req.params;
-  const product = newInstance.getProductById(path, product_id);
-
-  if (product) {
-    return res.json(product);
-  }
-  return res.json({ error: "Producto no encontrado" });
-});
 
 app.listen(PORT, () => console.log(`Listening on port ${PORT}`));
+
+
